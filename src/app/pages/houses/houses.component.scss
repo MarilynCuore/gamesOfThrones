@@ -1,0 +1,13 @@
+.houses_wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 2rem;
+    padding-top: 2rem;
+    background: black;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+.min-container{
+  max-width: 95%;
+  margin: 0 auto;
+}

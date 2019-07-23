@@ -1,0 +1,15 @@
+<div class="drop-down">
+    <div class="drop-down_header" (click)="change()" [ngClass]="{'opened-header': open == true}">
+        <h2 class="drop-down_title">{{title}}</h2>
+        <span class="drop-down_icon close" [ngClass]="{'opened-icon': open == true}">
+            <i class="material-icons">
+                keyboard_arrow_down
+            </i>
+        </span>
+    </div>
+    <div class="drop-down_content" [ngClass]="{'opened': open == true}">
+        <div class="body-wrapper" *ngFor="let item of body">
+            <p>{{item}}</p>
+        </div>
+    </div>
+</div>

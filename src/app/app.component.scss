@@ -1,0 +1,26 @@
+.app_wrapper {
+  height: 100vh;
+  display: flex;
+  app-nav {
+    width: 150px;
+  }
+  .app {
+    flex-grow: 1;
+    overflow: auto;
+    min-height: 100vh;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  app-nav {
+    width: 100% !important;
+    height: 100%;
+    position: fixed;
+    clip-path: circle(5% at 3rem 3rem);
+    transition: clip-path 500ms ease;
+    &.open {
+        transition: clip-path 500ms ease;
+        clip-path: circle(100%);
+    }
+  }
+}

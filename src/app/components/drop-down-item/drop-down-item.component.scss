@@ -1,0 +1,54 @@
+
+.drop-down {
+  &_header {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+    padding-left: 0px;
+    h2 {
+      font-weight: normal;
+      padding-left: 5px;
+    }
+    &:hover {
+      background: rgba(#1e364c, .7);
+      color: white;
+    }
+    &.opened-header {
+      color: white;
+    }
+    .drop-down_title {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+    .drop-down_icon {
+      &.opened-icon {
+        transform: rotate(180deg);
+        transition: rotate 1s ease-out;
+      }
+
+      cursor: pointer;
+    }
+  }
+  &_content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    box-sizing: border-box;
+    &.opened {
+      //   display: block;
+      height: auto;
+      max-height: 400px;
+    }
+    .body-wrapper {
+      padding: 1rem;
+      p {
+        color: white;
+        text-transform: lowercase;
+        margin-bottom: 0px;
+        margin-top: 0px;
+      }
+    }
+  }
+}

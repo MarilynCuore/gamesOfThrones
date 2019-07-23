@@ -1,0 +1,13 @@
+<div class="house container" *ngIf="house">
+        <div class="house_image">
+            <div class="house_image-wrapper" [ngStyle]="{'background-image': 'url('+house.logoURL+')'}"></div>
+        </div>
+        <div class="house_content">
+            <h3>{{house.name}}</h3>
+            <p *ngIf="house.sigil">Lema: {{house.sigil}}</p>
+            <p *ngIf="house.region.length > 0 ">Región: {{house.region[0]}}</p>
+            <p *ngIf="house.seat.length > 0">Sede: {{house.seat[0]}}</p>
+            <app-drop-down-item [title]="'Alianzas'" [body]="house.allegiance"  *ngIf="house.allegiance.length > 0"></app-drop-down-item>
+            <app-drop-down-item [title]="'Religiones'" [body]="house.religion" *ngIf="house.religion.length > 0 "></app-drop-down-item>
+        </div>
+    </div>

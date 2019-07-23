@@ -1,0 +1,8 @@
+<div class="character">
+    <div class="character_image" [ngStyle]="{'background-image': 'url('+character.image+')'}">
+        <a id="{{character.id}}" [routerLink]="['/character', character.name]"></a>
+    </div>
+    <div class="character_content">
+        <h3>{{character.name}}</h3>
+    </div>
+</div>

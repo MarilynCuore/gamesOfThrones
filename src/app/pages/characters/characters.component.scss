@@ -1,0 +1,11 @@
+.characters_wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-gap: 2rem;
+  padding-top: 2rem;
+  background: black;
+}
+.mmin-container{
+  max-width: 95%;
+  margin: 0 auto;
+}

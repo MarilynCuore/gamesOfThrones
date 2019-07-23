@@ -1,0 +1,26 @@
+<nav>
+    <div class="nav container">
+        <div class="nav_menu-mobile">
+            <a (click)="openMenuMobile()">
+                <i class="material-icons" #menu>
+                    menu
+                </i>
+            </a>
+        </div>
+        <div class="nav_logo">
+            <a routerLinkActive="active" [routerLink]="['home']">
+                <img src="../../../assets/logo1.png " alt="">
+            </a>
+        </div>
+        <div class="nav_list">
+            <div class="nav_list-item" *ngFor="let item of navItems">
+                <a [class.active]="isActive(item)" [routerLink]=" '/' + item.url">
+                    <i class="material-icons">
+                        {{item.icon}}
+                    </i>
+                    {{item.title}}
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>

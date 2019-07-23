@@ -1,0 +1,19 @@
+<div class="character">
+    <div class="character_image">
+        <div class="character_image-wrapper" [ngStyle]="{'background-image': 'url('+character.image+')'}">
+        </div>
+        <h3 class="character_name">{{character.name}}</h3>
+    </div>
+    <div class="character_content">
+        <p>Casa: <a [routerLink]="['/house', character.house]">{{ character.house}}</a></p>
+        <p>Padre: <a [routerLink]="['/character', character.father]">{{ character.father}}</a></p>
+        <app-drop-down-item [title]="'Alianzas'" [body]="character.allegiances" *ngIf="character.allegiances">
+        </app-drop-down-item>
+        <app-drop-down-item [title]="'Apariciones'" [body]="character.appearances" *ngIf="character.appearances">
+        </app-drop-down-item>
+        <app-drop-down-item [title]="'Descendientes'" [body]="character.siblings" *ngIf="character.siblings.length > 0">
+        </app-drop-down-item>
+        <app-drop-down-item [title]="'Títulos'" [body]="character.titles" *ngIf="character.titles.length > 0">
+        </app-drop-down-item>
+    </div>
+</div>

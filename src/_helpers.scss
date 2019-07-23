@@ -1,0 +1,41 @@
+@for $size from 1 through 4 {
+    .font-size-#{$size} {
+       
+        font-size: #{$size}rem;
+        
+        
+    }
+}
+@for $size from 1 through 4 {
+    .font-size-#{$size}-middle {
+       
+        font-size: #{$size + 0.5 }rem;
+        
+        
+    }
+}
+
+
+@for $size from 1 through 4 {
+    .padding-#{$size} {
+        padding: #{$size}rem;
+    }
+    .padding-top-#{$size} {
+        padding-top: #{$size}rem;
+    }
+    .padding-right-#{$size} {
+        padding-right: #{$size}rem;
+    }
+    .padding-left-#{$size} {
+        padding-left: #{$size}rem;
+    }
+    .padding-bottom-#{$size} {
+        padding-bottom: #{$size}rem;
+    }
+    .padding-horizontal-#{$size} {
+        padding: 0 #{$size}rem;
+    }
+    .padding-vertical-#{$size} {
+        padding: #{$size}rem 0;
+    }
+}

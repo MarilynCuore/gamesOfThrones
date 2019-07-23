@@ -1,0 +1,8 @@
+<div class="house">
+    <div class="house_image" [ngStyle]="{'background-image': 'url('+house.logoURL+')'}">
+        <a [routerLink]="['/house', house.name]"></a>
+    </div>
+    <div class="house_content">
+        <h3>{{house.name}}</h3>
+    </div>
+</div>

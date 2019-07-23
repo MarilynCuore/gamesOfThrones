@@ -1,0 +1,51 @@
+.character {
+  height: 350px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  &:hover {
+    .character_content {
+      bottom: 0;
+    }
+  }
+  &_image {
+    background-size: cover;
+    background-position: center top;
+    width: 100%;
+    height: 100%;
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &_content {
+    transition: 0.5s;
+    bottom: -100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    padding: 0.5em;
+    background: rgba(black, 0.8);
+    padding: 1rem;
+    h3 {
+      color: white;
+      text-transform: uppercase;
+      font-weight: normal;
+      font-size: .7rem;
+      font-weight: normal;
+      font-family: gamesOfThrones;
+    }
+    p {
+      color: white;
+      font-size: 1rem;
+      font-weight: normal;
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .character_content{
+    bottom: 0px;
+  }
+}
